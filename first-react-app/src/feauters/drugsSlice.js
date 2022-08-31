@@ -20,6 +20,7 @@ export const fetchDrugs = createAsyncThunk(
   }
 );
 
+
 const drugsSlice = createSlice({
   name: "drugs",
   initialState,
