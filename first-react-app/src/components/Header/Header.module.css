@@ -1,0 +1,44 @@
+.head {
+    width: 100%;
+    height: 100px;
+    background-color: #4b975d;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    width: 30%;
+  }
+  
+  .logo img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .link {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .butt {
+    width: 20%;
+    position: relative;
+  }
+  .butt button {
+    position: absolute;
+    right: 0;
+  }
+  
+  .butt img {
+    width: 45px;
+    height: 40px;
+  }
+  
+  .text {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+  }
+  
