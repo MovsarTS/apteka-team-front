@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { authSignIn } from '../feauters/applicationSlice';
-import './autho.css'
+import { authSignIn } from '../../feauters/applicationSlice';
+
+import styles from '../Auth/auth.module.css'
 
 const SignIn = () => {
     const [login, setLogin] = useState('')
@@ -24,17 +25,17 @@ const SignIn = () => {
     }
 
     return (
-        <div className='login'>
-            <div className='login-screen'>
-                <div class="app-title">
+        <div className={styles.login}>
+            <div className={styles.loginScreen}>
+                <div className={styles.appTitle}>
                     <h1>Login</h1>
                 </div>
-                <div class="login-form">
-                    <div class="control-group">
+                <div className={styles.loginForm}>
+                    <div className={styles.controlGroup}>
                         <form onSubmit={handleSignIn}>
                             <input
                                 id="login-name"
-                                class="login-field"
+                                className={styles.loginField}
                                 type='text'
                                 value={login}
                                 placeholder='login'
@@ -43,19 +44,19 @@ const SignIn = () => {
                         </form>
                     </div>
                     <br />
-                    <div class="control-group">
+                    <div className={styles.controlGroup}>
                         <form>
                             <input
                                 id="login-pass"
-                                class="login-field"
+                                className={styles.loginField}
                                 type='password'
                                 value={password}
                                 placeholder='password'
                                 onChange={handleSetPass}
                             />
                             <br />
-                            <button class="btn btn-primary btn-large btn-block" type='submit' onClick={handleSignIn}>Sign in</button>
-                            <a class="login-link" href="#">Lost your password?</a>
+                            <button className={styles.btn} type='submit' onClick={handleSignIn}>Sign in</button>
+                            <a className={styles.loginLink} href="#">Lost your password?</a>
                         </form>
                     </div>
                 </div>
