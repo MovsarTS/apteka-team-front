@@ -21,7 +21,7 @@ const Category = () => {
         <div className={styles.main}>
             {cats.map((cat) => {
                 return <Link className={styles.lin} to={`/category/${cat._id}`}>
-                <div data-aos='fade-up' className={styles.catCard}>
+                <div data-aos='zoom-in' className={styles.catCard}>
                     <div className={styles.catImg}>
                         <img src={icon3} alt='p' />
                     </div>

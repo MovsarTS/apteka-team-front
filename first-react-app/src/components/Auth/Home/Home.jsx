@@ -2,9 +2,15 @@ import React from 'react';
 import Doctor from '../Home/img/Doctor.jpg';
 import styles from '../Home/home.module.css';
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import { useEffect } from 'react';
 
 
 const Home = () => {
+    useEffect(() => {
+        Aos.init({duration: 2500})
+    }, [])
+
     return (
         <div className={styles.home}>
             <div className={styles.info_blok}>
@@ -14,7 +20,7 @@ const Home = () => {
                 </div>
                 <div className={styles.info_buttons}>
                     <div className={styles.info_btn1}>
-                    <Link to="/category"><button>Купить лекарства</button></Link>
+                    <Link to="/alldrugs"><button>Купить лекарства</button></Link>
                     </div>
                     <div className={styles.info_btn2}>
                     <Link to="/contacts"><button>Посмотреть адрес</button></Link>
@@ -23,7 +29,7 @@ const Home = () => {
             </div>
             
             <div className={styles.img_block}>
-                <img src={Doctor} alt="" />
+                <img data-aos='fade-up' src={Doctor} alt="" />
             </div>
             
         </div>

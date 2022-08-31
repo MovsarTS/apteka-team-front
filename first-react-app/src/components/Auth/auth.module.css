@@ -1,13 +1,5 @@
-* {
-    box-sizing: border-box;
-    }
-    
-    *:focus {
-      outline: none;
-    }
     body {
     font-family: Arial;
-    padding: 50px;
     }
     .login {
     margin: 20px auto;
