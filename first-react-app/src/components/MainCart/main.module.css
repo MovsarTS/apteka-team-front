@@ -1,0 +1,84 @@
+.buttonLive {
+    text-decoration: none;
+    border: none;
+    color: transparent;
+    padding: 15px 30px;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+
+.buttonLive:before {
+    content: "Search";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    background: rgba(6, 94, 166, 0.714);
+    border-radius: 5px;
+    font-size: 15px;
+    top: 0;
+    left: 100%;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(0) rotatey(0);
+    opacity: 0;
+}
+
+.buttonLive:hover:before {
+    transform: scale(1) rotatey(360deg);
+    left: 0;
+    opacity: 1;
+    border-radius: 5px;
+}
+
+.buttonLive:after {
+    content: "Search";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    background: rgba(6, 94, 166, 0.714);
+    font-size: 15px;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(1) rotatey(0);
+    opacity: 1;
+}
+
+.buttonLive:hover:after {
+    transform: scale(0) rotatey(360deg);
+    left: -100%;
+    opacity: 0;
+}
+
+.liveSearchMain {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputLive {
+    margin-right: 5px;
+    outline-color: rgba(9, 156, 127, 0.701);
+}
+
+.inputLive:hover {
+    transform: scale(1.03);
+}
