@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Calibri';
+}
+
+.home {
+    background-color: #b1cbe4;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_blok {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0 100% 100% 0 / 0 60% 60% 0;
+    background: #45bd3d;
+}
+
+.info_text {
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+.info_text_p1 {
+    width: 80%;
+    font-size: 40px;
+    color: white;
+    padding-bottom: 50px;
+    font-weight: bold;
+}
+
+.info_text_p2 {
+    font-size: 22px;
+    color: black;
+}
+
+.info_buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: 100px;
+}
+
+.info_btn1 {
+    width: 50%;
+}
+
+.info_btn1 button {
+    padding: 15px 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: black;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50% 100px 100px 50% / 100% 0 0 100%;
+    background: rgb(216, 216, 216);
+    cursor: pointer;
+}
+.info_btn1 button:hover {
+    padding: 15px 25px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50% 100px 100px 50% / 100% 0 0 100%;
+    cursor: pointer;
+    background: rgb(207, 76, 76);
+}
+.info_btn2 {
+    width: 50%;
+}
+.info_btn2 button {
+    padding: 15px 21.5px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 100px 100px 50% / 0 100% 100% 0;
+    background: royalblue;
+    cursor: pointer;
+}
+
+.info_btn2 button:hover {
+    padding: 15px 21.5px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 100px 100px 50% / 0 100% 100% 0;
+    background: purple;
+    cursor: pointer;
+}
+
+.img_block {
+    width: 50%;
+    height: 100%;
+}
+
+.img_block img {
+    width: 100%;
+    height: 99.5%
+}
