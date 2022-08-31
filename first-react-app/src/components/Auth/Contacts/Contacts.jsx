@@ -3,7 +3,7 @@ import styles from '../Contacts/contacts.module.css';
 import Icon1 from '../Contacts/img/Icon1.png';
 import Icon2 from '../Contacts/img/Icon2.png';
 import Icon3 from '../Contacts/img/Icon3.png';
-import Maps_mult from '../Contacts/img/Maps.mult.png';
+import Maps_mult from '../../Auth/Contacts/img/Maps_mult.png';
 
 const Contacts = () => {
     return (
