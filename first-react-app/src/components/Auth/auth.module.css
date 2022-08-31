@@ -7,28 +7,27 @@
     }
     body {
     font-family: Arial;
-    background-color: rgba(9, 9, 75, 0.811);
     padding: 50px;
     }
     .login {
     margin: 20px auto;
     width: 300px;
     }
-    .login-screen {
-    background-color: #FFF;
+    .loginScreen {
+    background-color: #1510a2d4;
     padding: 20px;
     border-radius: 5px
     }
     
-    .app-title {
+    .appTitle {
     text-align: center;
-    color: #777;
+    color: whitesmoke;
     }
     
-    .login-form {
+    .loginForm {
     text-align: center;
     }
-    .control-group {
+    .controlGroup {
     margin-bottom: 10px;
     }
     
@@ -64,18 +63,20 @@
       display: block;
       width: 250px;
       margin: 0 auto;
+      cursor: pointer;
+      margin-top: 10px;
     }
     
     .btn:hover {
       background-color: #2980B9;
     }
     
-    .login-link {
+    .loginLink {
       font-size: 12px;
-      color: #444;
+      color: whitesmoke;
       display: block;
-      margin-top: 12px;
+      margin-top: 7px;
     }
-    #login-pass {
+    #loginPass {
         margin-bottom: 15px;
     }

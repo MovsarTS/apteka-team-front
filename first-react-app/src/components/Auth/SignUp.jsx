@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { authSignUp } from '../feauters/applicationSlice';
-import './autho.css'
+import { authSignUp } from '../../feauters/applicationSlice';
+
+import styles from '../Auth/auth.module.css'
 
 const SignUp = () => {
     const [login, setLogin] = useState('')
@@ -25,17 +26,17 @@ const SignUp = () => {
 
 
     return (
-        <div className='login'>
-        <div className='login-screen'>
-            <div class="app-title">
+        <div className={styles.login}>
+        <div className={styles.loginScreen}>
+            <div class={styles.appTitle}>
                 <h1>Register</h1>
             </div>
-            <div class="login-form">
-                <div class="control-group">
+            <div class={styles.loginForm}>
+                <div class={styles.controlGroup}>
                     <form onSubmit={handleSignUp}>
                         <input
                             id="login-name"
-                            class="login-field"
+                            class={styles.loginField}
                             type='text'
                             value={login}
                             placeholder='name'
@@ -44,19 +45,19 @@ const SignUp = () => {
                     </form>
                 </div>
                 <br />
-                <div class="control-group">
+                <div class={styles.controlGroup}>
                     <form>
                         <input
                             id="login-pass"
-                            class="login-field"
+                            class={styles.loginField}
                             type='password'
                             value={password}
                             placeholder='password'
                             onChange={handleSetPass}
                         />
                         <br />
-                        <button class="btn btn-primary btn-large btn-block" type='submit' onClick={handleSignUp}>Sign up</button>
-                        <a class="login-link" href="#">Do you have an account?</a>
+                        <button class={styles.btn} type='submit' onClick={handleSignUp}>Sign up</button>
+                        <a class={styles.loginLink} href="#">Do you have an account?</a>
                     </form>
                 </div>
             </div>
