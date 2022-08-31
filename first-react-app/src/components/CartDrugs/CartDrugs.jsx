@@ -20,6 +20,8 @@ const CartNews = ({drug}) => {
     </div>
     </div>
     );
+
+    
 };
 
 export default CartNews;
