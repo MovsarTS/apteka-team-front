@@ -3,9 +3,16 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styles from "../Header/Header.module.css";
 import AWW2 from './img/AWW2.png'
+import Basket from "../Basket/Basket";
+import { useState } from "react";
 
 const Header = () => {
+  const [open, setOpen] = useState(false)
   const token = useSelector((state) => state.applicationSlice.token)
+
+  function handleBasketOpen(){
+    setOpen(!open)
+  }
 
  const handleClean = () => {
   localStorage.clear()
@@ -29,7 +36,13 @@ const Header = () => {
           <Link to='/auth' className={styles.line}><button  className={styles.exitBtn}>Регистрация</button></Link></>}
         </div>
         <div className={styles.butt}>
-          <button> <img src="https://png.pngtree.com/png-vector/20190926/ourlarge/pngtree-shopping-cart-line-icon-vector-png-image_1744042.jpg" alt="q" /> </button>
+          <button onClick={handleBasketOpen}> <img src="https://png.pngtree.com/png-vector/20190926/ourlarge/pngtree-shopping-cart-line-icon-vector-png-image_1744042.jpg" alt="q" /> </button>
+          {
+          open ? 
+          <Basket />
+          :
+          false
+        }
         </div>
       </div>
     </div>
