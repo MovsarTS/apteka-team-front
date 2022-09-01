@@ -9,7 +9,6 @@
     padding: 15px 30px;
     font-size: 10px;
     border-radius: 5px;
-    font-family: sans-serif;
     letter-spacing: 5px;
     transition: all 0.5s;
     position: relative;
@@ -27,7 +26,6 @@
     font-size: 15px;
     top: 0;
     left: 100%;
-    font-family: sans-serif;
     letter-spacing: 5px;
     transition: all 1s;
     height: 100%;
@@ -55,7 +53,6 @@
     border-radius: 5px;
     top: 0;
     left: 0;
-    font-family: sans-serif;
     letter-spacing: 5px;
     transition: all 1s;
     height: 100%;

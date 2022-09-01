@@ -54,37 +54,115 @@
 
 .exitBtn {
   width: 100px;
+  height: 60px;
   text-align: center;
   display: block;
   font-family: arial;
   text-decoration: none;
   font-weight: 300;
-  font-size: 14px;
-  border: #1071FF 0.5px solid;
-  color: #1071FF;
+  font-size: 13px;
+  /* border: #1071FF 0.5px solid; */
+  border: none;
+  border-right: 2px solid #45bd3d;
+  color: #45bd3d;
   padding: 3px;
-  padding-left: 0px;
-  padding-right: 0px;
   margin: 5px auto;
   transition: .5s;
   border-radius: 0px;
   text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .exitBtn:hover {
+  width: 100px;
+  height: 60px;
+  text-align: center;
+  display: block;
+  font-family: arial;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 13px;
+  /* border: #1071FF 0.5px solid; */
+  border: none;
+  border-right: 2px solid #45bd3d;
+  color: white;
+  background: #45bd3d;
+  padding: 3px;
+  margin: 5px auto;
+  transition: .5s;
+  border-radius: 0px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.exitBtn2 {
+  width: 100px;
+  height: 60px;
+  text-align: center;
+  display: block;
+  font-family: arial;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 13px;
+  /* border: #1071FF 0.5px solid; */
+  border: none;
+  border-right: 5px solid #45bd3d;
+  color: #45bd3d;
+  padding: 3px;
+  margin: 5px auto;
+  transition: .5s;
+  border-radius: 0px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.exitBtn2:hover {
+  width: 100px;
+  height: 60px;
+  text-align: center;
+  display: block;
+  font-family: arial;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 13px;
+  /* border: #1071FF 0.5px solid; */
+  border: none;
+  border-right: 5px solid #45bd3d;
+  color: white;
+  background: #45bd3d;
+  padding: 3px;
+  margin: 5px auto;
+  transition: .5s;
+  border-radius: 0px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+/* .exitBtn:hover {
   top: 5px;
   transition: .5s;
   color: #0bba3f;
   border: #10FF58 1px solid;
   border-radius: 10px;
-}
+} */
 
-.exitBtn:active {
+/* .exitBtn:active {
   color: #000;
   border: #1A1A1A 1px solid;
   transition: .07s;
   background-color: #FFF;
-}
+} */
+
 .line {
   text-decoration: none;
+}
+
+.btns {
+  padding-left: 30px;
+  display: flex;
 }
