@@ -21,6 +21,8 @@ const CartNews = ({drug}) => {
 
   function hadleAddInBasket(drug) {
     console.log(1);
+
+    
     // const newBasket = basket.filter((item) => {
     //   if (item._id !== drug) {
     //     setDisabled(true)
