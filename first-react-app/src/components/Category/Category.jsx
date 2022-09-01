@@ -23,7 +23,7 @@ const Category = () => {
                 return <Link className={styles.lin} to={`/category/${cat._id}`}>
                 <div data-aos='zoom-in' className={styles.catCard}>
                     <div className={styles.catImg}>
-                        <img src={icon3} alt='p' />
+                        <img src={`http://localhost:3030/images/${cat.image}`} alt='p' />
                     </div>
                     <div className={styles.catText}>
                         <h3>{cat.name}</h3>
