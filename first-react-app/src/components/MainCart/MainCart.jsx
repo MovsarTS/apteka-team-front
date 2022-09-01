@@ -38,7 +38,7 @@ const MainCart = () => {
         <input placeholder="Поиск..." className={styles.inputLive} value={input} onChange={handleSearch} />
         <button className={styles.buttonLive}>click</button>
       </div>
-      {mainCat.map((item, index) => {
+      <div className={styles.Cards_du}>{mainCat.map((item, index) => {
         if (item.category === id) {
           return <>
             <CartDrugs drug={item} key={index} />
@@ -49,7 +49,7 @@ const MainCart = () => {
             <CartDrugs drug={item} key={index} />
           </>
         );
-      })}
+      })}</div>
     </div>
   );
 };
