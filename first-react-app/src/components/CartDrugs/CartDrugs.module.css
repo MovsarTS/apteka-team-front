@@ -2,7 +2,6 @@
     height: 420px;
     width: 654px;
     display: flex;
-
     margin: 50px auto;
     border-radius: 7px 7px 7px 7px;
     /* VIA CSS MATIC https://goo.gl/cIbnS */
@@ -93,7 +92,6 @@
     display: inline-block;
     height: 50px;
     font-family: 'Suranna', serif;
-    
   }
   
   .productPriceBtn button {
