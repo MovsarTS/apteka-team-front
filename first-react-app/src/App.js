@@ -20,6 +20,7 @@ const App = () => {
       <Route path="/contacts" element={<Contacts />} />
       <Route path='/category' element={<Category />} />
       <Route path='/alldrugs' element={<MainCart />} />
+      <Route path='/category/:id' element={<MainCart />} />
     </Routes>
     </>
   );
