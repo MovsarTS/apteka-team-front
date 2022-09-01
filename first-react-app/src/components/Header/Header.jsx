@@ -32,7 +32,7 @@ const Header = () => {
           <Link to="/contacts" className={styles.text}> Контакты </Link>
         </div>
         <div className={styles.btns}>
-          {token ? <button className={styles.exitBtn} onClick={handleClean}>Выход</button> : <><Link to='/login' className={styles.line}><button className={styles.exitBtn}>Вход</button></Link>
+          {token ? <button className={styles.exitBtn} onClick={handleClean}>Выход</button> : <><Link to='/login' className={styles.line}><button className={styles.exitBtn2}>Вход</button></Link>
           <Link to='/auth' className={styles.line}><button  className={styles.exitBtn}>Регистрация</button></Link></>}
         </div>
         <div className={styles.butt}>
