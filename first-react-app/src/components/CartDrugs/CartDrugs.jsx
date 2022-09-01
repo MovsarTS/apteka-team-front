@@ -16,7 +16,7 @@ const CartNews = ({drug}) => {
     <div className={styles.productInfo}>
       <div className={styles.productText}>
         <h1>{drug.name}</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vitae in praesentium laudantium dolorem molestiae ut voluptate culpa fuga consequuntur suscipit, tempore voluptas repellendus possimus, blanditiis labore? Aliquam, iure laborum.</p>
+        <p className={styles.disc}>{drug.discription}</p>
       </div>
       <div className={styles.productPriceBtn}>
         <p><span>{drug.price}₽</span></p>
