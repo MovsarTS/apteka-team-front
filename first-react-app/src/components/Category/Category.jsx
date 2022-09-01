@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './category.module.css'
-import icon3 from './img/Group.png'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { useEffect } from 'react';
