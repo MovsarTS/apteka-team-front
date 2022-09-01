@@ -109,13 +109,13 @@
     text-transform: uppercase;
     letter-spacing: 0.2em;
     color: #ffffff;
-    background-color: #9cebd5;
+    background-color: #18ba2bd7;
     cursor: pointer;
     outline: none;
   }
   
   .productPriceBtn button:hover {
-    background-color: #79b0a1;
+    background-color: #38ad8e;
   }
   .productImg img {
     width: 100%;

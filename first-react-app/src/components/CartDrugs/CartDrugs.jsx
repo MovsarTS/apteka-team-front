@@ -20,7 +20,7 @@ const CartNews = ({drug}) => {
       </div>
       <div className={styles.productPriceBtn}>
         <p><span>{drug.price}₽</span></p>
-        <button type='button'>Купить лекарство</button>
+        <button type='button'>Добавить <br />в корзину</button>
       </div>
     </div>
     </div>
