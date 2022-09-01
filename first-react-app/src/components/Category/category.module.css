@@ -34,3 +34,13 @@
     word-break: break-all;
     text-align: center;
 }
+
+.catText h3 {
+    padding-top: 20px;
+}
+
+.catText p {
+    width: 80%;
+    padding-top: 10px;
+    margin: auto;
+}

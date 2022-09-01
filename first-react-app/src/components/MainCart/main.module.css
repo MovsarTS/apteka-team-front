@@ -1,3 +1,7 @@
+.Cards_du {
+    display: flex;
+}
+
 .buttonLive {
     text-decoration: none;
     border: none;
@@ -13,7 +17,7 @@
 }
 
 .buttonLive:before {
-    content: "Search";
+    content: "НАЙТИ";
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +45,7 @@
 }
 
 .buttonLive:after {
-    content: "Search";
+    content: "НАЙТИ";
     display: flex;
     justify-content: center;
     align-items: center;
