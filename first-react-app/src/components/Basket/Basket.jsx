@@ -5,17 +5,17 @@ import style from './Basket.module.css'
 const Basket = () => {
     const basket = useSelector((state) => state.basketSlice.basket)
     console.log(basket);
-    return (<>
+    return (<div className={style.basket}>
         {basket.map((element) => {
-            return(
-                <div className={style.basket}>
-                    <div>
-                        {element._id}
-                    </div>
+            return (
+                <div>
+                    <img src={`http://localhost:3030/images/${element.image}`}/>
+                    {element.name}
+                    {element.price}
                 </div>
             )
         })}
-        </>
+    </div>
     );
 };
 
