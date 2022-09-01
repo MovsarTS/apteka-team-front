@@ -1,44 +1,81 @@
 .head {
-    width: 100%;
-    height: 100px;
-    background-color: #4b975d;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .logo {
-    width: 30%;
-  }
-  
-  .logo img {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .link {
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .butt {
-    width: 20%;
-    position: relative;
-  }
-  .butt button {
-    position: absolute;
-    right: 0;
-  }
-  
-  .butt img {
-    width: 45px;
-    height: 40px;
-  }
-  
-  .text {
-    font-size: 30px;
-    color: white;
-    text-decoration: none;
-  }
-  
+  width: 100%;
+  height: 100px;
+  background-color: #4b975d;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 30%;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.link {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.butt {
+  width: 20%;
+  position: relative;
+}
+
+.butt button {
+  position: absolute;
+  right: 0;
+}
+
+.butt img {
+  width: 45px;
+  height: 40px;
+}
+
+.text {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.exitBtn {
+  width: 100px;
+  text-align: center;
+  display: block;
+  font-family: arial;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+  border: #1071FF 0.5px solid;
+  color: #1071FF;
+  padding: 3px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 5px auto;
+  transition: .5s;
+  border-radius: 0px;
+  text-decoration: none;
+}
+
+.exitBtn:hover {
+  top: 5px;
+  transition: .5s;
+  color: #0bba3f;
+  border: #10FF58 1px solid;
+  border-radius: 10px;
+}
+
+.exitBtn:active {
+  color: #000;
+  border: #1A1A1A 1px solid;
+  transition: .07s;
+  background-color: #FFF;
+}
+.line {
+  text-decoration: none;
+}
