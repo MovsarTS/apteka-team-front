@@ -37,13 +37,12 @@
 }
 
 .butt button {
-  position: absolute;
-  right: 0;
+
 }
 
 .butt img {
-  width: 45px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 
 .text {

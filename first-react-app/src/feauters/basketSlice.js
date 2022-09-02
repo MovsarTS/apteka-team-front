@@ -31,6 +31,23 @@ export const patchBasket = createAsyncThunk('basket/patch', async ({userId, drug
         })
         
         const basket = await res.json()
+        return basket
+    } catch (e) {
+        thunkAPI.rejectWithValue(e)
+    }
+})
+export const deleteBasket = createAsyncThunk('basket/delete', async ({userId, drugId}, thunkAPI) => {
+    console.log(userId, drugId);
+    try {
+        const res = await fetch(`http://localhost:3030/basket/delete${userId}`, {
+            method: 'PATCH',
+            headers: {
+                "Content-Type": 'application/json'
+            },
+            body: JSON.stringify({ drugId })
+        })
+        
+        const basket = await res.json()
         console.log(basket);
         return basket
     } catch (e) {
