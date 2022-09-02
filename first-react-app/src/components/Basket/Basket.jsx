@@ -26,6 +26,7 @@ const Basket = () => {
     }
   }
   function handleDelete(drugId){
+    
     // const drugID = basket.filter((item) => {
     //     return item._id === drugId
     // })
