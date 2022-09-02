@@ -44,7 +44,7 @@ export const authSignIn = createAsyncThunk(
 
             const token = await res.json()
 
-            localStorage.setItem('login', token.token)
+            localStorage.setItem('token', token.token)
             localStorage.setItem('name', token.name)
 
             return token
