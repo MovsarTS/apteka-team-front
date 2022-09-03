@@ -35,20 +35,23 @@ const CartNews = ({drug}) => {
 
 
     return (
-      <div  data-aos='zoom-in' className={styles.wrapper}>
-      <div class={styles.productImg}>
-      <img src={`http://localhost:3030/images/${drug.image}`} alt='port'/>
-    </div>
-    <div className={styles.productInfo}>
-      <div className={styles.productText}>
-        <h1>{drug.name}</h1>
-        <p className={styles.disc}>{drug.discription}</p>
+    <div  data-aos='zoom-in' className={styles.cardAndInf}>
+      <div className={styles.wrapper}>
+        <div class={styles.productImg}>
+        <img src={`http://localhost:3030/images/${drug.image}`} alt='port'/>
+        </div>
       </div>
-      <div className={styles.productPriceBtn}>
-        <p><span>{drug.price}₽</span></p>
-        <button type='button' onClick={() => hadleAddInBasket(drug._id)} disabled={newBas ? true : false} >Добавить <br />в корзину</button>
+      <div className={styles.productInfo}>
+        <div className={styles.productText}>
+          <h1>{drug.name}</h1>
+          <p className={styles.disc}>{drug.discription}</p>
+        <div className={styles.productPriceBtn}>
+          <p>{drug.price}₽</p>
+          <button className={styles.btn11} type='button' onClick={() => hadleAddInBasket(drug._id)} disabled={newBas ? true : false} >Добавить в корзину</button>
+        </div>
       </div>
-    </div>
+        
+      </div>
     </div>
     );
 

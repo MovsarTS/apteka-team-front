@@ -17,10 +17,16 @@
   border: none;
 }
 
+.logotype {
+  position: absolute;
+  left: 650px;
+  width: 90px;
+}
+
 .header_text {
   width: 50%;
   height: 70px;
-  background-color: #44be3c;
+  background-color: #00c024;
   display: flex;
 }
 
@@ -63,15 +69,16 @@
   font-size: 13px;
   /* border: #1071FF 0.5px solid; */
   border: none;
-  border-right: 2px solid #45bd3d;
-  color: #45bd3d;
+  color: #93d18f;
+  background: #18a93a;
   padding: 3px;
   margin: 5px auto;
   transition: .5s;
-  border-radius: 0px;
+  border-radius: 0 25px;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .exitBtn:hover {
@@ -84,17 +91,17 @@
   font-weight: 300;
   font-size: 13px;
   /* border: #1071FF 0.5px solid; */
-  border: none;
-  border-right: 2px solid #45bd3d;
+  border: 3px solid #18a93a;
   color: white;
   background: #45bd3d;
   padding: 3px;
   margin: 5px auto;
   transition: .5s;
-  border-radius: 0px;
+  border-radius: 0 25px;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .exitBtn2 {
@@ -108,15 +115,16 @@
   font-size: 13px;
   /* border: #1071FF 0.5px solid; */
   border: none;
-  border-right: 5px solid #45bd3d;
-  color: #45bd3d;
+  color: #93d18f;
+  background: #18a93a;
   padding: 3px;
   margin: 5px auto;
   transition: .5s;
-  border-radius: 0px;
+  border-radius: 0 25px;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .exitBtn2:hover {
@@ -130,16 +138,17 @@
   font-size: 13px;
   /* border: #1071FF 0.5px solid; */
   border: none;
-  border-right: 5px solid #45bd3d;
   color: white;
   background: #45bd3d;
+  border: 3px solid #18a93a;
   padding: 3px;
   margin: 5px auto;
   transition: .5s;
-  border-radius: 0px;
+  border-radius: 0 25px;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+  margin-left: 5px;
 
 }
 

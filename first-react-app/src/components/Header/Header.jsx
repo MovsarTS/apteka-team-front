@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styles from "../Header/Header.module.css";
 import AWW2 from './img/AWW2.png'
+import logo from './img/logo.png'
 import Basket from "../Basket/Basket";
 import { useState } from "react";
 
@@ -22,8 +23,8 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.header_img}>
-        {/* <Link to="/" className={styles.text}><img src="https://st2.depositphotos.com/1096482/7877/i/600/depositphotos_78778970-stock-photo-3d-pharmacy-symbol.jpg" alt="q" /></Link> */}
         <img src={AWW2} alt="" />
+        <div className={styles.logotype}><Link to="/"><img src={logo} alt="#" /></Link></div>
       </div>
       <div className={styles.header_text}>
         <div className={styles.link}>

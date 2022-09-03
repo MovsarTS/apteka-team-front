@@ -1,5 +1,7 @@
 .Cards_du {
     display: flex;
+    justify-content: space-around;
+    height: 100vh;
 }
 
 .buttonLive {
