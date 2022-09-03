@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBasket, patchBasket } from "../../feauters/basketSlice";
 import { useState } from "react";
+import { fetchUsers } from '../../feauters/usersSlice';
+import { adddrug } from '../../feauters/usersSlice';
 
 const CartNews = ({drug}) => {
   const [disabled, setDisabled] = useState(false);
@@ -20,7 +22,9 @@ const CartNews = ({drug}) => {
   }, [dispatch])
 
   function hadleAddInBasket(drug) {
-    dispatch(patchBasket({userId, drug}))
+    dispatch(patchBasket({userId, drug}),
+    dispatch(fetchUsers()))
+    dispatch(fetchUsers())
   }
 
 

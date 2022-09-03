@@ -4,14 +4,17 @@ import { Link } from "react-router-dom";
 import styles from "../Header/Header.module.css";
 import AWW2 from './img/AWW2.png'
 import Basket from "../Basket/Basket";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { fetchUsers } from "../../feauters/usersSlice";
 
 const Header = () => {
   const [open, setOpen] = useState(false)
   const token = useSelector((state) => state.applicationSlice.token)
-
+const dispatch = useDispatch()
   function handleBasketOpen(){
     setOpen(!open)
+   
   }
 
  const handleClean = () => {

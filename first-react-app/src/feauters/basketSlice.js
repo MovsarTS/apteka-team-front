@@ -39,7 +39,7 @@ export const patchBasket = createAsyncThunk('basket/patch', async ({userId, drug
 export const deleteBasket = createAsyncThunk('basket/delete', async ({userId, drugId}, thunkAPI) => {
     console.log(userId, drugId);
     try {
-        const res = await fetch(`http://localhost:3030/basket/delete${userId}`, {
+        const res = await fetch(`http://localhost:3030/basket/delete/${userId}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": 'application/json'
@@ -48,7 +48,7 @@ export const deleteBasket = createAsyncThunk('basket/delete', async ({userId, dr
         })
         
         const basket = await res.json()
-        console.log(basket);
+    
         return basket
     } catch (e) {
         thunkAPI.rejectWithValue(e)
@@ -62,8 +62,14 @@ const basketSlice = createSlice({
     extraReducers: (builder) => {
         builder
         .addCase(fetchBasket.fulfilled, (state, action) => {
-
             state.basket = action.payload.basket
+        })
+        .addCase(patchBasket.fulfilled, (state, action) => {
+            
+         
+        })
+        .addCase(deleteBasket.fulfilled, (state, action) => {
+            state.basket = state.basket.filter((elem) => elem._id !== action.payload.basket)
         })
     }
 })
