@@ -1,4 +1,4 @@
-.basket{
+.basket {
     display: flex;
     flex-direction: column;
     width: 200%;
@@ -9,7 +9,8 @@
     right: 5%;
     z-index: 5;
 }
-.card_basket{
+
+.card_basket {
     margin-top: 5px;
     margin-bottom: 10px;
     width: 100%;
@@ -18,27 +19,65 @@
     justify-content: center;
     align-items: center;
 }
-.amoun_controller{
-    
+
+.amoun_controller {
+
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.amoun_controller button{
+
+.amoun_controller button {
     border: none;
     border-radius: 10px;
     font-size: 20px;
     width: 15%;
 }
-.delBtn{
+
+.delBtn {
     width: 100%;
     margin-left: 10px;
 }
-.delBtn button{
+
+.delBtn button {
     text-align: center;
     border: none;
     border-radius: 10px;
     width: 20px;
     font-size: 18px;
+}
+
+.buttonBuy {
+    width: 130px;
+    text-align: center;
+    display: block;
+    font-family: arial;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    border: #1071FF 0.5px solid;
+    color: #1071FF;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 5px auto;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.buttonBuy:hover {
+    top: 5px;
+    transition: .5s;
+    color: #0cb43e;
+    border: #0ba338 1px solid;
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+.buttonBuy:active {
+    color: #000;
+    border: #1A1A1A 1px solid;
+    transition: .07s;
+    background-color: #FFF;
 }

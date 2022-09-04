@@ -174,3 +174,8 @@
   padding-left: 30px;
   display: flex;
 }
+.butt {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 95px;
+}
