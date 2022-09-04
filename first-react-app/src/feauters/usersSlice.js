@@ -57,6 +57,48 @@ export const buyByBasket = createAsyncThunk('basket/buy', async ({userId}, thunk
         thunkAPI.rejectWithValue(e)
     }
 })
+export const amountPlus = createAsyncThunk(
+    "amountPlus/Patch",
+    async ({drugId, amount, userId}, thunkAPI) => {
+      try {
+        const res = await fetch("http://localhost:3030/amountPlus", {
+          method: 'PATCH',
+          headers: {
+            "Content-Type": 'application/json'
+          },
+          body: JSON.stringify({drugId, amount})
+        });
+  
+        const drugs = await res.json();
+  
+        return {drugId, amount, userId}
+        
+      } catch (e) {
+        thunkAPI.rejectWithValue(e);
+      }
+    }
+  );
+  export const amountMinus = createAsyncThunk(
+    "amountMinus/Patch",
+    async ({drugId, amount, userId}, thunkAPI) => {
+      try {
+        const res = await fetch("http://localhost:3030/amountMinus", {
+          method: 'PATCH',
+          headers: {
+            "Content-Type": 'application/json'
+          },
+          body: JSON.stringify({drugId, amount})
+        });
+  
+        const drugs = await res.json();
+  
+        return {drugId, amount, userId};
+        
+      } catch (e) {
+        thunkAPI.rejectWithValue(e);
+      }
+    }
+  );
 
 
 const usersSlice = createSlice({
@@ -92,6 +134,33 @@ const usersSlice = createSlice({
                 return user
             })
         })
+        .addCase(amountPlus.fulfilled, (state, action) => {
+            state.user = state.user.map((user) => {
+                if (user._id === action.payload.userId){
+
+                    user.basket = user.basket.map((drug) => {
+                        if (drug._id === action.payload.drugId){
+                            drug.inBasket += 1
+                        }
+                        return drug
+                    })
+                }
+                return user
+            })
+          })
+          .addCase(amountMinus.fulfilled, (state, action) => {
+            state.user = state.user.map((user) => {
+                if (user._id === action.payload.userId){
+
+                    user.basket = user.basket.map((drug) => {
+                        if (drug._id === action.payload.drugId){
+                            drug.inBasket -= 1
+                        }
+                        return drug
+                    })
+                }
+                return user
+            })          })
     }
 })
 

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { buyByBasket } from "../../feauters/usersSlice";
-import { amountMinus, amountPlus } from "../../feauters/drugsSlice";
+import { amountMinus, amountPlus } from "../../feauters/usersSlice";
 import { deleteBasket, fetchUsers } from "../../feauters/usersSlice";
 import style from "./Basket.module.css";
 
@@ -16,7 +16,7 @@ const Basket = () => {
 
   function handlePlus(drugId, amount) {
     amount += 1;
-    dispatch(amountPlus({ drugId, amount }));
+    dispatch(amountPlus({ drugId, amount, userId }));
     setDisabled(false);
   }
 
@@ -27,7 +27,7 @@ const Basket = () => {
   function handleMinus(drugId, amount) {
     if (amount !== 0) {
       amount -= 1;
-      dispatch(amountMinus({ drugId, amount }));
+      dispatch(amountMinus({ drugId, amount, userId }));
     } else {
       setDisabled(true);
     }
