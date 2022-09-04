@@ -29,7 +29,7 @@ const CartNews = ({drug}) => {
 
 
     return (
-    <div  data-aos='zoom-in' className={styles.cardAndInf}>
+    <div className={styles.cardAndInf}>
       <div className={styles.wrapper}>
         <div class={styles.productImg}>
         <img src={`http://localhost:3030/images/${drug.image}`} alt='port'/>

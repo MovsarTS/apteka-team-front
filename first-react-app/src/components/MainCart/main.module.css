@@ -1,7 +1,17 @@
+.Carousel {
+    cursor: grab;
+    overflow: hidden;
+    /* background-color: #45bd3d; */
+}
+
 .Cards_du {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     height: 100vh;
+    width: 2000px;
+    /* margin-left: 50px; */
+    /* overflow: hidden; */
+    background-color: #b1cbe4;
 }
 
 .buttonLive {
