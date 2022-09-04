@@ -46,6 +46,7 @@
     border-radius: 10px;
     width: 20px;
     font-size: 18px;
+    background-color: unset;
 }
 
 .buttonBuy {
