@@ -25,7 +25,7 @@ const Basket = () => {
   },[dispatch])
 
   function handleMinus(drugId, amount) {
-    if (amount !== 0) {
+    if (amount !== 1) {
       amount -= 1;
       dispatch(amountMinus({ drugId, amount, userId }));
     } else {
@@ -63,7 +63,6 @@ const Basket = () => {
                           </button>
                           <img src={`http://localhost:3030/images/${element.image}`} alt='j'/>
                           <button
-                            disabled={disabled}
                             onClick={() => handlePlus(element._id, element.inBasket)}
                           >
                             +
