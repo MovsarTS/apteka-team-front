@@ -56,7 +56,7 @@ const Basket = () => {
                         {element.name}
                         <div className={style.amoun_controller}>
                           <button
-                            disabled={disabled}
+                            disabled={element.inBasket ? false : true}
                             onClick={() => handleMinus(element._id, element.inBasket)}
                           >
                             -
