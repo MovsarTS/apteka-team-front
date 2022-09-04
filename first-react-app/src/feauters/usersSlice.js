@@ -39,6 +39,24 @@ export const deleteBasket = createAsyncThunk(
             thunkAPI.rejectWithValue(e)
         }
 })
+export const buyByBasket = createAsyncThunk('basket/buy', async ({userId}, thunkAPI) => {
+    
+    try {
+        const res = await fetch(`http://localhost:3030/basket/${userId}`, {
+            method: 'PATCH',
+            headers: {
+                "Content-Type": 'application/json'
+            },
+            body: JSON.stringify({basket: [] })
+        })
+        
+        const basket = await res.json()
+    
+        return userId
+    } catch (e) {
+        thunkAPI.rejectWithValue(e)
+    }
+})
 
 
 const usersSlice = createSlice({
@@ -53,10 +71,23 @@ const usersSlice = createSlice({
         .addCase(deleteBasket.fulfilled, (state, action) => {
             state.user = state.user.map((user) => {
                 if (user._id === action.payload.userId){
+                    console.log(user);
                     user.basket = user.basket.filter((drug) => {
                         return drug._id !== action.payload.drugId
                     })
                     
+                }
+                return user
+            })
+        })
+        .addCase(buyByBasket.fulfilled, (state, action) => {
+            state.user = state.user.map((user) => {
+                if (user._id === action.payload){
+                    console.log(action.payload);
+                    console.log(user);
+                    user.basket = user.basket.filter((drug) => {
+                        return false
+                    })
                 }
                 return user
             })

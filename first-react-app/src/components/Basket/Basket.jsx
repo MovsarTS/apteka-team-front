@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { buyByBasket } from "../../feauters/basketSlice";
+import { buyByBasket } from "../../feauters/usersSlice";
 import { amountMinus, amountPlus } from "../../feauters/drugsSlice";
 import { deleteBasket, fetchUsers } from "../../feauters/usersSlice";
 import style from "./Basket.module.css";
