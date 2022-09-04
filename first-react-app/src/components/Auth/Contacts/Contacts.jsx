@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from '../Contacts/contacts.module.css';
 import Icon1 from '../Contacts/img/Icon1.png';
 import Icon2 from '../Contacts/img/Icon2.png';
 import Icon3 from '../Contacts/img/Icon3.png';
 import Maps_mult from '../../Auth/Contacts/img/Maps_mult.png';
+import Aos from 'aos'
 
 const Contacts = () => {
+
+    useEffect(() => {
+        Aos.init({duration: 2000});
+    }, [])
+
     return (
         <div className={styles.maps_and_inf}>
             <div className={styles.inform}>
@@ -26,7 +32,7 @@ const Contacts = () => {
                 <div className={styles.maps_this}>
                     <div className={styles.maps_mult}>
                         <div className={styles.maps_mult_a}>
-                            <img src={Maps_mult} alt="" />
+                            <img data-aos='zoom-in' src={Maps_mult} alt="" />
                         </div>
                     </div>
                     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5afe904d7ef6e953f635fb861820c3b6b68f39a8861138e3577926f1ff939aff&amp;source=constructor" width="98.5%" height="400px" frameborder="0"></iframe>
