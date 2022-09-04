@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteBasket } from "../../feauters/basketSlice";
+import { buyByBasket, deleteBasket } from "../../feauters/basketSlice";
 import { amountMinus, amountPlus } from "../../feauters/drugsSlice";
 import { fetchUsers } from "../../feauters/usersSlice";
 import style from "./Basket.module.css";
@@ -23,7 +23,7 @@ const Basket = () => {
 
   useEffect(()=>{
     dispatch(fetchUsers())
-  },[])
+  },[dispatch])
 
   console.log(user)
   function handleMinus(drugId, amount) {
@@ -41,6 +41,9 @@ const Basket = () => {
     // })
     dispatch(deleteBasket({userId, drugId}))
   }
+ const handleBuy = () => {
+  dispatch(buyByBasket({userId}))
+ }
 
   return (
     <div className={style.basket}>
@@ -60,7 +63,7 @@ const Basket = () => {
                           >
                             -
                           </button>
-                          <img src={`http://localhost:3030/images/${element.image}`} />
+                          <img src={`http://localhost:3030/images/${element.image}`} alt='j'/>
                           <button
                             disabled={disabled}
                             onClick={() => handlePlus(element._id, element.inBasket)}
@@ -75,6 +78,7 @@ const Basket = () => {
                   })}
             }
         })}
+        <button className={style.buttonBuy} onClick={handleBuy}>Buy</button>
     </div>
   );
 };

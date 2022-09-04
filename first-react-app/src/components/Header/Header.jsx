@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "../Header/Header.module.css";
 import AWW2 from './img/AWW2.png'
 import logo from './img/logo.png'
+import basket from './img/basket.png'
 import Basket from "../Basket/Basket";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
@@ -15,7 +16,6 @@ const Header = () => {
 const dispatch = useDispatch()
   function handleBasketOpen(){
     setOpen(!open)
-   
   }
 
  const handleClean = () => {
@@ -40,7 +40,7 @@ const dispatch = useDispatch()
           <Link to='/auth' className={styles.line}><button  className={styles.exitBtn}>Регистрация</button></Link></>}
         </div>
         <div className={styles.butt}>
-          <button onClick={handleBasketOpen}> <img src="https://png.pngtree.com/png-vector/20190926/ourlarge/pngtree-shopping-cart-line-icon-vector-png-image_1744042.jpg" alt="q" /> </button>
+          <button onClick={handleBasketOpen}> <img src={basket} alt="q" /> </button>
           {
           open ? 
           <Basket />
