@@ -5,6 +5,13 @@ import styles from "../Header/Header.module.css";
 import AWW2 from './img/AWW2.png'
 import logo from './img/logo.png'
 import basket from './img/basket.png'
+import medicine from './img/medicine.png'
+import icon1 from './img/icon1.png'
+import icon2 from './img/icon2.png'
+import icon3 from './img/icon3.png'
+import icon4 from './img/icon4.png'
+import icon5 from './img/icon5.png'
+import icon6 from './img/icon6.png'
 import Basket from "../Basket/Basket";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
@@ -27,7 +34,7 @@ const dispatch = useDispatch()
     <div className={styles.header}>
       <div className={styles.header_img}>
         <img src={AWW2} alt="" />
-        <div className={styles.logotype}><Link to="/"><img src={logo} alt="#" /></Link></div>
+        <div className={styles.logotype}><Link to="/"><img src={icon5} alt="#" /></Link></div>
       </div>
       <div className={styles.header_text}>
         <div className={styles.link}>
