@@ -7,6 +7,7 @@ import { fetchDrugs } from "../../feauters/drugsSlice";
 import styles from '../MainCart/main.module.css'
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion"
 
 const MainCart = () => {
   const dispatch = useDispatch();
@@ -15,8 +16,11 @@ const MainCart = () => {
 
   const [input, setInput] = useState('')
 
+  const [schet, setSchet] = useState(3)
+
   const handleSearch = (e) => {
     setInput(e.target.value)
+    setSchet(input === '' ? 0 : drugs.length)
   }
 
   const filtered = drugs.filter((elem) => {
@@ -38,7 +42,9 @@ const MainCart = () => {
         <input placeholder="Поиск..." className={styles.inputLive} value={input} onChange={handleSearch} />
         <button className={styles.buttonLive}>click</button>
       </div>
-      <div className={styles.Cards_du}>{mainCat.map((item, index) => {
+      <motion.div className={styles.Carousel}>
+        <motion.div drag='x' dragConstraints={{right: 0, left: schet * -130}} className={styles.Cards_du}>
+        {mainCat.map((item, index) => {
         if (item.category === id) {
           return <>
             <CartDrugs drug={item} key={index} />
@@ -49,7 +55,9 @@ const MainCart = () => {
             <CartDrugs drug={item} key={index} />
           </>
         );
-      })}</div>
+      })}</motion.div>
+      </motion.div>
+      
     </div>
   );
 };

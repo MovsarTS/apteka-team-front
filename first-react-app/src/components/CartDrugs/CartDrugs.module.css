@@ -1,18 +1,18 @@
 .cardAndInf {
-  margin-top: 150px;
+  margin: 150px 20px 0 20px;
   width: 30%;
   height: 30%;
   display: flex;
 }
 
-.cardAndInf:hover {
+/* .cardAndInf:hover {
   margin-top: 150px;
   width: 30%;
   height: 30%;
   display: flex;
   border-radius: 15px;
   box-shadow: 0px 1px 13px 9px rgba(34, 60, 80, 0.3);
-}
+} */
 
 .wrapper {
   width: 100%;
@@ -61,6 +61,7 @@
 }
 
 .productPriceBtn p {
+  padding-top: 1px;
   font-size: 22px;
   font-weight: bold;
   height: 10px;
