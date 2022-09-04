@@ -51,7 +51,7 @@ const Basket = () => {
                     return (
                       <div className={style.card_basket}>
                         <div className={style.delBtn}>
-                            <button onClick={() => handleDelete(element._id)}>X</button>
+                            <button onClick={() => handleDelete(element._id)}>✖</button>
                             </div>
                         {element.name}
                         <div className={style.amoun_controller}>
