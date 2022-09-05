@@ -7,7 +7,7 @@
 .header_img {
   width: 50%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   border: none;
 }
 
@@ -40,10 +40,6 @@
 .butt {
   width: 20%;
   position: relative;
-}
-
-.butt button {
-
 }
 
 .butt img {

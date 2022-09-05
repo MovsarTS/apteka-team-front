@@ -20,9 +20,9 @@ const categorySlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-        .addCase(fetchCategory.fulfilled, (state, action) => {
-            state.category = action.payload;
-        })
+            .addCase(fetchCategory.fulfilled, (state, action) => {
+                state.category = action.payload;
+            })
     }
 });
 
