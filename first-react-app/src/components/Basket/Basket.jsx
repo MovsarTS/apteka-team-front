@@ -75,7 +75,7 @@ const Basket = () => {
                   })}
             }
         )}
-        <button className={style.buttonBuy} onClick={handleBuy}>Buy</button>
+        <button className={style.buttonBuy} onClick={handleBuy}>Купить</button>
     </div>
   );
 };

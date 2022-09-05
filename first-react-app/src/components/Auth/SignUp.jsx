@@ -29,7 +29,7 @@ const SignUp = () => {
         <div className={styles.login}>
         <div className={styles.loginScreen}>
             <div class={styles.appTitle}>
-                <h1>Register</h1>
+                <h1>Создать аккаунт</h1>
             </div>
             <div class={styles.loginForm}>
                 <div class={styles.controlGroup}>
@@ -39,7 +39,7 @@ const SignUp = () => {
                             class={styles.loginField}
                             type='text'
                             value={login}
-                            placeholder='name'
+                            placeholder='логин'
                             onChange={handleSetName}
                         />
                     </form>
@@ -52,12 +52,12 @@ const SignUp = () => {
                             class={styles.loginField}
                             type='password'
                             value={password}
-                            placeholder='password'
+                            placeholder='пароль'
                             onChange={handleSetPass}
                         />
                         <br />
-                        <button class={styles.btn} type='submit' onClick={handleSignUp}>Sign up</button>
-                        <a class={styles.loginLink} href="#">Do you have an account?</a>
+                        <button class={styles.btn} type='submit' onClick={handleSignUp}>Зарегистрироваться</button>
+                        <a class={styles.loginLink} href="#">У вас есть аккаунт?</a>
                     </form>
                 </div>
             </div>

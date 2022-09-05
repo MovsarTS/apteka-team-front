@@ -28,7 +28,7 @@ const SignIn = () => {
         <div className={styles.login}>
             <div className={styles.loginScreen}>
                 <div className={styles.appTitle}>
-                    <h1>Login</h1>
+                    <h1>Вход в аккаунт</h1>
                 </div>
                 <div className={styles.loginForm}>
                     <div className={styles.controlGroup}>
@@ -38,7 +38,7 @@ const SignIn = () => {
                                 className={styles.loginField}
                                 type='text'
                                 value={login}
-                                placeholder='login'
+                                placeholder='логин'
                                 onChange={handleSetName}
                             />
                         </form>
@@ -51,12 +51,12 @@ const SignIn = () => {
                                 className={styles.loginField}
                                 type='password'
                                 value={password}
-                                placeholder='password'
+                                placeholder='пароль'
                                 onChange={handleSetPass}
                             />
                             <br />
-                            <button className={styles.btn} type='submit' onClick={handleSignIn}>Sign in</button>
-                            <a className={styles.loginLink} href="#">Lost your password?</a>
+                            <button className={styles.btn} type='submit' onClick={handleSignIn}>Войти</button>
+                            <a className={styles.loginLink} href="#">Забыли свой пароль?</a>
                         </form>
                     </div>
                 </div>
