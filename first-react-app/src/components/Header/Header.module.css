@@ -231,4 +231,13 @@
   border: none;
   cursor: pointer;
   /* margin-right: 50px; */
+  justify-content: flex-end;
+  margin-left: 95px;
+}
+.text:hover {
+  transform: scale(1.10);
+}
+.text:active {
+  color:rgba(7, 111, 115, 0.841);
+  transform: scale(1.10);
 }
