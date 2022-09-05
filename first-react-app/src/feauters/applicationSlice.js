@@ -8,7 +8,6 @@ const initialState = {
     name: localStorage.getItem('name')
 }
 
-
 export const authSignUp = createAsyncThunk(
     'auth/signUp',
     async ({ login, password }, thunkAPI) => {
@@ -20,7 +19,6 @@ export const authSignUp = createAsyncThunk(
                 },
                 body: JSON.stringify({ login, password })
             })
-
             const json = await res.json()
 
             return json
@@ -41,7 +39,6 @@ export const authSignIn = createAsyncThunk(
                 },
                 body: JSON.stringify({ login, password })
             })
-
             const token = await res.json()
 
             localStorage.setItem('token', token.token)
@@ -54,31 +51,30 @@ export const authSignIn = createAsyncThunk(
     }
 )
 
-
 const applicationSlice = createSlice({
     name: 'appSlice',
     initialState,
     reducers: {},
     extraReducers: (builder) => {
         builder
-        .addCase(authSignUp.pending, (state) => {
-            state.signingUp = true;
-            state.error = null;
-        })
-        .addCase(authSignUp.fulfilled, (state, action) => {
-            state.signingUp = false;
-            state.error = null;
-        })
-        .addCase(authSignIn.pending, (state) => {
-            state.signingIn = true;
-            state.error = null;
-        })
-        .addCase(authSignIn.fulfilled, (state, action) => {
-            state.signingIn = false;
-            state.error = null;
-            state.token = action.payload.token;
-            state.name = action.payload.name;
-        })
+            .addCase(authSignUp.pending, (state) => {
+                state.signingUp = true;
+                state.error = null;
+            })
+            .addCase(authSignUp.fulfilled, (state, action) => {
+                state.signingUp = false;
+                state.error = null;
+            })
+            .addCase(authSignIn.pending, (state) => {
+                state.signingIn = true;
+                state.error = null;
+            })
+            .addCase(authSignIn.fulfilled, (state, action) => {
+                state.signingIn = false;
+                state.error = null;
+                state.token = action.payload.token;
+                state.name = action.payload.name;
+            })
     }
 })
 

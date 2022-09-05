@@ -13,9 +13,7 @@ const MainCart = () => {
   const dispatch = useDispatch();
   const drugs = useSelector((state) => state.drugsSlice.drugs);
   const { id } = useParams();
-
   const [input, setInput] = useState('')
-
   const [schet, setSchet] = useState(3)
 
   const handleSearch = (e) => {

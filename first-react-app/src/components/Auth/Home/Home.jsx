@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 const Home = () => {
     useEffect(() => {
-        Aos.init({duration: 2500})
+        Aos.init({ duration: 2500 })
     }, [])
 
     return (
@@ -20,18 +20,16 @@ const Home = () => {
                 </div>
                 <div className={styles.info_buttons}>
                     <div className={styles.info_btn1}>
-                    <Link to="/alldrugs"><button>Купить лекарства</button></Link>
+                        <Link to="/alldrugs"><button>Купить лекарства</button></Link>
                     </div>
                     <div className={styles.info_btn2}>
-                    <Link to="/contacts"><button>Посмотреть адрес</button></Link>
+                        <Link to="/contacts"><button>Посмотреть адрес</button></Link>
                     </div>
                 </div>
             </div>
-            
             <div className={styles.img_block}>
                 <img data-aos='fade-up' src={Doctor} alt="" />
             </div>
-            
         </div>
     );
 };

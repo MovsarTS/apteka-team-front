@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    basket:[]
+    basket: []
 }
 
 export const fetchBasket = createAsyncThunk('basket/fetch', async (userId, thunkAPI) => {
@@ -15,12 +15,13 @@ export const fetchBasket = createAsyncThunk('basket/fetch', async (userId, thunk
         })
         const basket = await res.json()
         return basket
-        
+
     } catch (e) {
         thunkAPI.rejectWithValue(e)
     }
 })
-export const patchBasket = createAsyncThunk('basket/patch', async ({userId, drug}, thunkAPI) => {
+
+export const patchBasket = createAsyncThunk('basket/patch', async ({ userId, drug }, thunkAPI) => {
     try {
         const res = await fetch('http://localhost:3030/basket', {
             method: 'PATCH',
@@ -29,7 +30,6 @@ export const patchBasket = createAsyncThunk('basket/patch', async ({userId, drug
             },
             body: JSON.stringify({ userId, drug })
         })
-        
         const basket = await res.json()
         return basket
     } catch (e) {
@@ -37,21 +37,17 @@ export const patchBasket = createAsyncThunk('basket/patch', async ({userId, drug
     }
 })
 
-
-
 const basketSlice = createSlice({
     name: 'basket',
     initialState,
     reducers: {},
     extraReducers: (builder) => {
         builder
-        .addCase(fetchBasket.fulfilled, (state, action) => {
-            state.basket = action.payload.basket
-        })
-        .addCase(patchBasket.fulfilled, (state, action) => {
-            
-         
-        })
+            .addCase(fetchBasket.fulfilled, (state, action) => {
+                state.basket = action.payload.basket
+            })
+            .addCase(patchBasket.fulfilled, (state, action) => {
+            })
     }
 })
 

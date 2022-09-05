@@ -10,19 +10,14 @@ export const fetchDrugs = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const res = await fetch("http://localhost:3030/alldrugs");
-
       const drugs = await res.json();
 
       return drugs;
-      
     } catch (e) {
       thunkAPI.rejectWithValue(e);
     }
   }
 );
-
-
-
 
 const drugsSlice = createSlice({
   name: "drugs",
@@ -30,10 +25,9 @@ const drugsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-    .addCase(fetchDrugs.fulfilled, (state, action) => {
-      state.drugs = action.payload;
-    })
-    
+      .addCase(fetchDrugs.fulfilled, (state, action) => {
+        state.drugs = action.payload;
+      })
   },
 });
 

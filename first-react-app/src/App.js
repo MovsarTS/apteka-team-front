@@ -15,7 +15,6 @@ const App = () => {
 
   const token = useSelector(state => state.applicationSlice.token);
 
-
   if (token) {
     return (
       <>
