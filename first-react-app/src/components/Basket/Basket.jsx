@@ -62,13 +62,13 @@ const Basket = () => {
                 </div>
                 <div>{`Количество: ${element.inBasket}`}</div>
                 {`Цена: ${element.price}`}
+                {item.basket.length === 0 ? 'Корзина пуста' : <button className={style.buttonBuy} onClick={handleBuy}>Купить</button>}
               </div>
             );
           })
         }
       }
       )}
-      <button className={style.buttonBuy} onClick={handleBuy}>Купить</button>
     </div>
   );
 };
