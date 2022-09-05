@@ -57,9 +57,9 @@
   text-decoration: none;
 }
 
-.exitBtn {
+.exitBtn3 {
   width: 100px;
-  height: 60px;
+  height: 50px;
   text-align: center;
   display: block;
   font-family: arial;
@@ -71,7 +71,54 @@
   color: #93d18f;
   background: #18a93a;
   padding: 3px;
-  margin: 5px auto;
+  margin: 10px auto;
+  transition: .5s;
+  border-radius: 0 25px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.exitBtn3:hover {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  font-family: arial;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 13px;
+  /* border: #1071FF 0.5px solid; */
+  border: 3px solid #18a93a;
+  color: white;
+  background: #45bd3d;
+  padding: 3px;
+  margin: 10px auto;
+  transition: .5s;
+  border-radius: 0 25px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+
+.exitBtn {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  display: block;
+  font-family: arial;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 13px;
+  /* border: #1071FF 0.5px solid; */
+  border: none;
+  color: #93d18f;
+  background: #18a93a;
+  padding: 3px;
+  margin: 10px auto;
   transition: .5s;
   border-radius: 0 25px;
   text-decoration: none;
@@ -82,7 +129,7 @@
 
 .exitBtn:hover {
   width: 100px;
-  height: 60px;
+  height: 50px;
   text-align: center;
   display: block;
   font-family: arial;
@@ -94,7 +141,7 @@
   color: white;
   background: #45bd3d;
   padding: 3px;
-  margin: 5px auto;
+  margin: 10px auto;
   transition: .5s;
   border-radius: 0 25px;
   text-decoration: none;
@@ -105,7 +152,7 @@
 
 .exitBtn2 {
   width: 100px;
-  height: 60px;
+  height: 50px;
   text-align: center;
   display: block;
   font-family: arial;
@@ -117,7 +164,7 @@
   color: #93d18f;
   background: #18a93a;
   padding: 3px;
-  margin: 5px auto;
+  margin: 10px auto;
   transition: .5s;
   border-radius: 0 25px;
   text-decoration: none;
@@ -128,7 +175,7 @@
 
 .exitBtn2:hover {
   width: 100px;
-  height: 60px;
+  height: 50px;
   text-align: center;
   display: block;
   font-family: arial;
@@ -141,7 +188,7 @@
   background: #45bd3d;
   border: 3px solid #18a93a;
   padding: 3px;
-  margin: 5px auto;
+  margin: 10px auto;
   transition: .5s;
   border-radius: 0 25px;
   text-decoration: none;
@@ -173,9 +220,15 @@
 .btns {
   padding-left: 30px;
   display: flex;
+  width: 250px;
 }
 .butt {
   display: flex;
-  justify-content: flex-end;
-  margin-left: 95px;
+  justify-content: center;
+}
+.butt button {
+  background-color: #00c024;
+  border: none;
+  cursor: pointer;
+  /* margin-right: 50px; */
 }
